@@ -6,9 +6,16 @@ public class Estudiante extends Persona {
     
     public Estudiante() {}
     
-    public void set(int DNI, String nombre, String apellido, String direccion, int telefono, int codigoProfesor, String titulo) {
-        super.set(DNI, nombre, apellido, direccion, telefono);
+    public void set(int dni, String nombre, String apellido, String direccion, int telefono, int codigoEstudiante, String especialidad) {
+        super.set(dni, nombre, apellido, direccion, telefono);
         this.codigoEstudiante = codigoEstudiante;
-        this.especialidad = especialidad; 
+        this.especialidad = especialidad;
+    }
+
+    public String toString() {
+        return super.toString()
+            + "codigo-estudiante: " + codigoEstudiante
+            + "\nespecialidad: " + especialidad
+            + "\n";
     }
 }
